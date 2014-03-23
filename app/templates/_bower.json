@@ -1,0 +1,10 @@
+{
+  "name": "<%= _.slugify(appTitle) %>",
+  "version": "0.0.0",
+  "dependencies": {
+    <% if(jQuery) { %>
+  		"jQuery": "*",
+  	<% } %>
+    "bootstrap-sass-official": "*"
+}
+}
