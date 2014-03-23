@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title></title>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <% if(bootstrap) { %>
+  <link rel="stylesheet" type="text/css"
+        href="css/bootstrap-sass-official/bootstrap.css">
+  <script type="text/javascript"
+          src="bootstrap-sass-official/vendor/assets/javascripts/bootstrap.js"></script>
+  <% } %>
+</head>
+<body>
+<div id="wrapper">
+  <header>
+  </header>
+  <nav>
+  </nav>
+  <section id="content">
+    <button type="button" class="btn btn-primary">Button</button>
+  </section>
+  <footer>
+    Footer
+  </footer>
+</div>
+<% if (jQuery){ %>
+<script src="bower_components/jQuery/dist/jquery.js"></script>
+<script>
+  $('body').append('Hallo');
+</script>
+<%}%>
+</body>
+</html>
