@@ -23,7 +23,8 @@ var MyappGenerator = yeoman.generators.Base.extend({
 
     var prompts = [{
       name: 'appTitle',
-      message: 'Give your fantastic, sweet and awesome app a name: '
+      message: 'Enter an app name: ',
+      default: 'testApp'
     },
       {
         type: 'checkbox',
