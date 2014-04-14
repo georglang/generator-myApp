@@ -1,5 +1,5 @@
 {
-  "name": "yeoman-generator",
+  "name": "generator-myApp",
   "private": true,
   "devDependencies": {
     "grunt": "~0.4.1",
