@@ -75,6 +75,7 @@ var MyappGenerator = yeoman.generators.Base.extend({
     this.template('_package.json', 'package.json');
     this.template('sass/style.sass', 'css/style.sass');
     this.template('sass/reset.sass', 'css/reset.sass');
+    this.template('js/main.js', 'js/main.js');
 
     this.copy('_package.json', 'package.json');
     this.copy('_bower.json', 'bower.json');
