@@ -20,6 +20,10 @@ module.exports = function (grunt) {
         files: 'stylesheets/sass/*.sass',
         tasks: ['sass']
       },
+      scripts: {
+        files: ['js/*.js', 'test/*Spec.js'],
+        tasks: ['test']
+      },
       livereload: {
         files: [
           'index.html',
