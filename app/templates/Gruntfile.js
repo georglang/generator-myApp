@@ -18,11 +18,11 @@ module.exports = function (grunt) {
       },
       css: { // watch all .sass files and call the sass task to convert them to .stylesheets
         files: 'stylesheets/sass/*.sass',
-        tasks: ['sass']
+        tasks: ['sass', 'minifyCss']
       },
       scripts: {
         files: ['js/*.js', 'test/*Spec.js'],
-        tasks: ['test', 'jshint']
+        tasks: ['test', 'jshint', 'minifyJs']
       },
       livereload: {
         files: [
@@ -88,12 +88,20 @@ module.exports = function (grunt) {
           'js/minify/minify.min.js': ['js/*.js']
         }
       }
+    },
+    cssmin: {
+      combine: {
+        files: {
+          'stylesheets/css/minify/minify.css': ['stylesheets/css/style.css', 'stylesheets/css/reset.css']
+        }
+      }
     }
   });
 
   grunt.registerTask('server', ['sass', 'connect:livereload', 'open', 'watch']);
   grunt.registerTask('test', ['jasmine']);
   grunt.registerTask('hint', ['jshint']);
-  grunt.registerTask('minify', ['uglify']);
+  grunt.registerTask('minifyJs', ['uglify']);
+  grunt.registerTask('minifyCss', ['cssmin']);
 };
 })();
