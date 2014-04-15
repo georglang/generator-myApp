@@ -65,7 +65,9 @@ var MyappGenerator = yeoman.generators.Base.extend({
 
   app: function () {
     this.mkdir('img');
-    this.mkdir('css');
+    this.mkdir('stylesheets');
+    this.mkdir('stylesheets/css');
+    this.mkdir('stylesheets/sass');
     this.mkdir('js');
     this.mkdir('vendor');
     this.mkdir('test');
@@ -75,8 +77,8 @@ var MyappGenerator = yeoman.generators.Base.extend({
     this.template('_bower.json', 'bower.json');
     this.template('_config.json', 'config.json');
     this.template('_package.json', 'package.json');
-    this.template('sass/style.sass', 'css/style.sass');
-    this.template('sass/reset.sass', 'css/reset.sass');
+    this.template('sass/style.sass', 'stylesheets/sass/style.sass');
+    this.template('sass/reset.sass', 'stylesheets/sass/reset.sass');
     this.template('js/main.js', 'js/main.js');
     this.template('test/testSpec.js', 'test/testSpec.js');
 

@@ -16,14 +16,14 @@ module.exports = function (grunt) {
         nospawn: true,
         livereload: LIVERELOAD_PORT
       },
-      css: { // watch all .sass files and call the sass task to convert them to .css
-        files: 'css/*.sass',
+      css: { // watch all .sass files and call the sass task to convert them to .stylesheets
+        files: 'stylesheets/sass/*.sass',
         tasks: ['sass']
       },
       livereload: {
         files: [
           'index.html',
-          'css/*.css', // reload converted .css file
+          'stylesheets/css/*.css', // reload converted .css file
           'js/*.js'
         ]
       }
@@ -55,9 +55,9 @@ module.exports = function (grunt) {
           style: 'expanded'
         },
         files: {
-          'css/style.css': 'css/style.sass',
-          'css/reset.css': 'css/reset.sass',
-          'css/bootstrap-sass-official/bootstrap.css': 'bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss'
+          'stylesheets/css/style.css': 'stylesheets/sass/style.sass',
+          'stylesheets/css/reset.css': 'stylesheets/sass/reset.sass',
+          'stylesheets/bootstrap-sass-official/bootstrap.css': 'bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss'
         }
       }
     },
