@@ -19,3 +19,10 @@
   "smarttabs": true,
   "white": true
 }
+  "globals": {
+    "jQuery": true,
+    "module": true,
+    "$": true,
+    "require": true
+  }
+}
