@@ -67,6 +67,7 @@ var MyappGenerator = yeoman.generators.Base.extend({
     this.mkdir('img');
     this.mkdir('stylesheets');
     this.mkdir('stylesheets/css');
+    this.mkdir('stylesheets/css/minify');
     this.mkdir('stylesheets/sass');
     this.mkdir('js');
     this.mkdir('js/minify');
