@@ -1,5 +1,5 @@
+(function(){
 'use strict';
-
 var LIVERELOAD_PORT = 35729;
 var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
 var mountFolder = function (connect, dir) {
@@ -22,7 +22,7 @@ module.exports = function (grunt) {
       },
       scripts: {
         files: ['js/*.js', 'test/*Spec.js'],
-        tasks: ['test']
+        tasks: ['test', 'jshint']
       },
       livereload: {
         files: [
@@ -73,9 +73,14 @@ module.exports = function (grunt) {
           helpers: 'test/*Helper.js'
         }
       }
+    },
+    jshint: {
+      all: ['js/*.js', 'test/*.js']
     }
   });
 
   grunt.registerTask('server', ['sass', 'connect:livereload', 'open', 'watch']);
   grunt.registerTask('test', ['jasmine']);
+  grunt.registerTask('jshint', ['jshint']);
 };
+})();
