@@ -76,11 +76,24 @@ module.exports = function (grunt) {
     },
     jshint: {
       all: ['js/*.js', 'test/*.js']
+    },
+    uglify: {
+      options: {
+        compress: {
+          drop_console: true //removes all console.log, console.table ...
+        }
+      },
+      my_target: {
+        files: {
+          'js/minify/minify.min.js': ['js/*.js']
+        }
+      }
     }
   });
 
   grunt.registerTask('server', ['sass', 'connect:livereload', 'open', 'watch']);
   grunt.registerTask('test', ['jasmine']);
   grunt.registerTask('hint', ['jshint']);
+  grunt.registerTask('minify', ['uglify']);
 };
 })();
