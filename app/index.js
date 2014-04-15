@@ -68,6 +68,7 @@ var MyappGenerator = yeoman.generators.Base.extend({
     this.mkdir('css');
     this.mkdir('js');
     this.mkdir('vendor');
+    this.mkdir('test');
 
     this.template('Gruntfile.js', 'Gruntfile.js');
     this.template('index.html', 'index.html');
@@ -77,6 +78,7 @@ var MyappGenerator = yeoman.generators.Base.extend({
     this.template('sass/style.sass', 'css/style.sass');
     this.template('sass/reset.sass', 'css/reset.sass');
     this.template('js/main.js', 'js/main.js');
+    this.template('test/testSpec.js', 'test/testSpec.js');
 
     this.copy('_package.json', 'package.json');
     this.copy('_bower.json', 'bower.json');
