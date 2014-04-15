@@ -60,8 +60,18 @@ module.exports = function (grunt) {
           'css/bootstrap-sass-official/bootstrap.css': 'bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss'
         }
       }
+    },
+    jasmine: {
+      pivotal: {
+        src: 'js/**/*.js',
+        options: {
+          specs: 'test/*Spec.js',
+          helpers: 'test/*Helper.js'
+        }
+      }
     }
   });
 
   grunt.registerTask('server', ['sass', 'connect:livereload', 'open', 'watch']);
+  grunt.registerTask('test', ['jasmine']);
 };
