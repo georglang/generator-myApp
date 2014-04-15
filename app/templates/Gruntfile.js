@@ -81,6 +81,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('server', ['sass', 'connect:livereload', 'open', 'watch']);
   grunt.registerTask('test', ['jasmine']);
-  grunt.registerTask('jshint', ['jshint']);
+  grunt.registerTask('hint', ['jshint']);
 };
 })();
