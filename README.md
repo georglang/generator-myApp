@@ -15,16 +15,16 @@ Installation options:
 
 Grunt Tasks:
 ============
-grunt server
-grunt test (jasmine)
-grunt hint (jshint)
-grunt minifyJs (uglify)
-grunt minifyCss (cssmin)
+- grunt server
+- grunt test (jasmine)
+- grunt hint (jshint)
+- grunt minifyJs (uglify)
+- grunt minifyCss (cssmin)
 
 
 Included:
 =========
-- filewatcher: index.html, *.css, *.js, Spec.js, minifyJs, minifyCss
+- filewatcher: index.html, *.css, *.js, *Spec.js, minifyJs, minifyCss
 - livereload
 - jasmine
 - sass
