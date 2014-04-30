@@ -31,7 +31,6 @@ Included:
 - jasmine
 - sass
 - jshint
+- concat
 - uglify
 - cssmin
-
-
