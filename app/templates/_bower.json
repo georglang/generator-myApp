@@ -1,12 +1,12 @@
 {
-  "name": "<%= _.slugify(appTitle) %>",
-  "version": "0.0.0",
+  "name": "<%= _.slugify( appTitle ) %>",
+  "version": "0.0.1",
   "dependencies": {
-    <% if(jQuery) { %>
-  		"jQuery": "*",
-  	<% } %>
-    <% if(bootstrap) { %>
+<% if(jQuery) { %>
+			"jquery": "*",
+		<% } %>
+<% if(bootstrap) { %>
 			"bootstrap": "*"
 		<% } %>
-  }
+}
 }
