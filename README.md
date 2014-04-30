@@ -15,8 +15,10 @@ Installation options:
 
 Grunt Tasks:
 ============
-- grunt server
+
 - grunt test (jasmine)
+- grunt build (concat, uglify, cssmin)
+- grunt server
 - grunt hint (jshint)
 - grunt minifyJs (uglify)
 - grunt minifyCss (cssmin)
