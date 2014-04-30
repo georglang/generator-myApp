@@ -20,11 +20,13 @@ Grunt Tasks:
 - grunt hint (jshint)
 - grunt minifyJs (uglify)
 - grunt minifyCss (cssmin)
+- grunt con (concat)
 
 
 Included:
 =========
-- filewatcher: index.html, *.css, *.js, *Spec.js, minifyJs, minifyCss
+- file watcher: index.html, *.css, *.js, minifyJs, minifyCss
+- testfile watcher:  *Spec.js
 - livereload
 - jasmine
 - sass
