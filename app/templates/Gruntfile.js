@@ -77,6 +77,17 @@ module.exports = function (grunt) {
     jshint: {
       all: ['js/*.js', 'test/*.js']
     },
+    concat: {
+      options: {
+        separator: ";"
+      },
+      dist: {
+        src: [
+          'js/**/*.js',
+        ],
+        dest: 'js/concat.js'
+      }
+    },
     uglify: {
       options: {
         compress: {
@@ -85,7 +96,7 @@ module.exports = function (grunt) {
       },
       my_target: {
         files: {
-          'js/minify/minify.min.js': ['js/*.js']
+          'js/minify/minify.min.js': ['js/concat.js']
         }
       }
     },
@@ -98,9 +109,10 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('server', ['sass', 'connect:livereload', 'open', 'watch']);
+  grunt.registerTask('server', ['sass', 'concat', 'uglify', 'cssmin', 'connect:livereload', 'open', 'watch']);
   grunt.registerTask('test', ['jasmine']);
   grunt.registerTask('hint', ['jshint']);
+  grunt.registerTask('con', ['concat']);
   grunt.registerTask('minifyJs', ['uglify']);
   grunt.registerTask('minifyCss', ['cssmin']);
 };
