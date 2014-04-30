@@ -6,13 +6,14 @@
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <link rel="stylesheet" type="text/css" href="stylesheets/css/minify/minify.css">
   <% if(bootstrap) { %>
   <link rel="stylesheet" type="text/css"
         href="stylesheets/bootstrap-sass-official/bootstrap.css">
-  <script type="text/javascript"
-          src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap.js"></script>
   <% } %>
+  <link rel="stylesheet" type="text/css" href="stylesheets/css/minify/minify.css">
+  <% if (jQuery){ %>
+  <script src="bower_components/jQuery/dist/jquery.min.js"></script>
+  <%}%>
 </head>
 <body>
 <h1>Welcome to the app <%= appTitle %></h1>
@@ -29,10 +30,7 @@
     FOOTER
   </footer>
 </div>
-<script src="js\minify/minify.min.js"></script>
-<% if (jQuery){ %>
-<script src="bower_components/jQuery/dist/jquery.js"></script>
-<%}%>
+<script src="js/minify/minify.min.js"></script>
 <% if(bootstrap) { %>
 <script type="text/javascript" src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap.js"></script>
 <% } %>
