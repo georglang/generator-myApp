@@ -39,10 +39,6 @@ var MyappGenerator = yeoman.generators.Base.extend({
             name: 'jQuery',
             value: 'includeJQuery',
             checked: true
-          }, {
-            name: 'Angular JS',
-            value: 'includeAngular',
-            checked: false
           }
         ]
       }];
