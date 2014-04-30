@@ -12,8 +12,6 @@ Installation options:
 =====================
 - Bootstrap
 - jQuery
-- AngularJs
-
 
 Grunt Tasks:
 ============
