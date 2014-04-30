@@ -3,7 +3,9 @@ Usage
 - clone repo
 - npm link
 - execute "yo myApp" to create a new application
-- run grunt server 
+- run
+grunt build,
+grunt server
 
 
 Installation options:
