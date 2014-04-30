@@ -5,6 +5,8 @@
     <% if(jQuery) { %>
   		"jQuery": "*",
   	<% } %>
-    "bootstrap-sass-official": "*"
-}
+    <% if(bootstrap) { %>
+			"bootstrap": "*"
+		<% } %>
+  }
 }
