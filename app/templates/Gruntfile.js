@@ -110,8 +110,8 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('test', ['jasmine']);
-  grunt.registerTask('build', ['concat', 'uglify', 'cssmin']);
-  grunt.registerTask('server', ['sass', 'connect:livereload', 'open', 'watch']);
+  grunt.registerTask('build', ['concat', 'uglify', 'sass', 'cssmin']);
+  grunt.registerTask('server', ['connect:livereload', 'open', 'watch']);
   grunt.registerTask('hint', ['jshint']);
   grunt.registerTask('con', ['concat']);
   grunt.registerTask('minifyJs', ['uglify']);
