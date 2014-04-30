@@ -2,11 +2,9 @@
   "name": "<%= _.slugify( appTitle ) %>",
   "version": "0.0.1",
   "dependencies": {
-<% if(jQuery) { %>
-			"jquery": "*",
+		<% if(bootstrap) { %>
+		"bootstrap-sass-official": "*",
 		<% } %>
-<% if(bootstrap) { %>
-			"bootstrap": "*"
-		<% } %>
-}
+    "jquery": "*"
+  }
 }
